@@ -1,0 +1,639 @@
+/* Reset basic styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: Arial, sans-serif;
+    font-size: 20px;
+  }
+  
+  /* Header section */
+  .header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 20px;
+    background-color: #f8f8f8;
+  }
+  
+  .logo {
+    height: 50px;
+    width: auto;
+  }
+  
+  .title {
+    flex: 1;
+    text-align:center;
+    font-size: 30px;
+    color: black;
+    margin-left: 69px;
+  }
+  
+  .auth-links {
+    display: flex;
+    gap: 15px;
+  }
+  
+  .auth-links a {
+    text-decoration: none;
+    color: #007bff;
+    font-weight: bold;
+  }
+  
+  /* Navigation bar */
+  .nav {
+    display: flex;
+    justify-content: center;
+    padding: 10px 0;
+    background-color: #e0e0e0;
+    gap: 55px;
+  }
+  
+  .nav a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+    font-size: larger;
+  }
+  
+
+/* Media Query for Small Screens */
+@media (max-width: 768px) {
+    /* Adjust the header and logo */
+    .header h1 {
+        font-size: 25px;
+        margin-left: 20px;
+    }
+
+    .logo-image {
+        width: 60px; /* Make the logo smaller on small screens */
+        margin-top: 30px;
+        margin-left: 10px;
+        
+    }
+
+    
+
+    /* Adjust navbar */
+    .navbar {
+        padding-left: 0;
+        text-align: center; /* Center align navbar items on small screens */
+    }
+
+    .navbar ul {
+        flex-direction:column-reverse; /* Stack the menu items vertically */
+        text-align: center;
+    }
+
+    .navbar li {
+        margin: 10px 0; /* Space items vertically */
+        font-size: 20px; /* Slightly smaller font */
+        padding-bottom: 10px;
+    }
+
+    
+    .background-image {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;     /* Ensures the image covers the container */
+        object-position: center; /* Centers the image */
+      }
+
+
+}
+
+/*-------------------------------Login page-------------------------------------------------------------------*/
+
+/* Ensure the image doesn't overflow down the page */
+.waveimage {
+  width: 100%;           /* Full-width container */
+  height: 665px;         /* Set desired height */
+  position: relative;
+  overflow: hidden;      /* Hides any overflow */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  }
+  
+
+
+.background-image {
+    width: 100%;
+    object-fit: cover;     /* Ensures the image covers the container */
+    object-position: center; /* Centers the image */
+  }
+  
+
+ /* Style for the paragraph text */
+.waveimage p{
+    position: absolute;       /* Position the text absolutely within the parent */
+    top: 50%;                 /* Center vertically */
+    left: 50%;                /* Center horizontally */
+    transform: translate(-50%, -50%); /* Shift to perfectly center the text */
+    color: white;             /* Set text color to white */
+    font-size: 35px;         /* Adjust font size as needed */
+    text-align: center;       /* Center the text */
+    background: rgba(0, 0, 0, 0.5); /* Optional: semi-transparent background for better readability */
+    padding: 10px;            /* Optional: add padding for better aesthetics */
+    border-radius: 5px;       /* Optional: rounded corners */
+}
+
+.waveimage p:nth-child(3){
+    color: rgb(255, 255, 255);
+    margin-top: 90px;
+    font-size: 25px;
+}
+
+
+
+.waveimagee {
+  width: 100%;           /* Full-width container */
+  height: 780px;         /* Set desired height */
+  position: relative;
+  overflow: hidden;      /* Hides any overflow */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  }
+
+  .background-imagee {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1; /* Sends the image to the background */
+  }
+
+  .waveimagee p{
+    position: absolute;       /* Position the text absolutely within the parent */
+    top: 50%;                 /* Center vertically */
+    left: 50%;                /* Center horizontally */
+    transform: translate(-50%, -50%); /* Shift to perfectly center the text */
+    color: white;             /* Set text color to white */
+    font-size: 35px;         /* Adjust font size as needed */
+    text-align: center;       /* Center the text */
+  /*  background: rgba(0, 0, 0, 0.5);  Optional: semi-transparent background for better readability */
+  /*  padding: 10px;            * Optional: add padding for better aesthetics */
+   /* border-radius: 5px;        Optional: rounded corners */
+    padding-bottom: 37%;
+}
+
+
+/* Container for the login form */
+.login-container {
+    position: relative;                /* Ensures positioning context if needed */
+    z-index: 10;                       /* Higher z-index so it's clickable over other elements */
+    width: 500px;                      /* Fixed width for the form */
+    height: 300px;
+    padding: 20px;                     /* Padding around the form */
+    background-color: rgba(255, 255, 255, 0.9); /* Semi-transparent background */
+    border-radius: 8px;                /* Rounded corners */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); /* Soft shadow */
+    text-align: center;
+    margin: 0 auto;                    /* Centers the form horizontally */
+  }
+
+
+  /* Login heading */
+.login-container h2 {
+    font-size: 20px;                   /* Larger font size for the title */
+    color: #333;                       /* Dark text color */
+    margin-bottom: 20px;               /* Space below the title */
+  }
+
+  /* Form labels */
+.login-form label {
+    display: block;                    /* Each label appears on its own line */
+    font-size: 14px;                   /* Smaller font for labels */
+    color: #333;                       /* Dark color for readability */
+    margin-bottom: 5px;                /* Space between label and input field */
+    text-align: left;                  /* Aligns label text to the left */
+  }
+  
+  /* Input fields (username and date of birth) */
+  .login-form input[type="text"],
+  .login-form input[type="date"] {
+    width: 100%;                       /* Full width for input fields */
+    padding: 10px;                     /* Space inside the input fields */
+    margin-bottom: 15px;               /* Space below each input field */
+    border: 1px solid #ddd;            /* Light border around input */
+    border-radius: 4px;                /* Rounded corners */
+    font-size: 16px;                   /* Font size for input text */
+  }
+
+
+  /* Continue button styling */
+.continue-btn {
+    width: 100%;                       /* Full width for the button */
+    padding: 12px;                     /* Space inside the button */
+    background-color: #4CAF50;         /* Green background color */
+    color: white;                      /* White text color */
+    border: none;                      /* Remove default border */
+    border-radius: 4px;                /* Rounded corners */
+    font-size: 16px;                   /* Larger font size for button text */
+    cursor: pointer;                   /* Pointer cursor on hover */
+    transition: background-color 0.3s; /* Smooth background color change on hover */
+  }
+  
+  /* Hover effect for the continue button */
+  .continue-btn:hover {
+    background-color: #45a049;         /* Darker green when hovering */
+  }
+  
+  /* Forgot link styling */
+  .forgot-link {
+    display: block;                    /* Makes link appear on a new line */
+    font-size: 14px;                   /* Smaller font for link */
+    color: #0073e6;                    /* Blue color for link */
+    text-decoration: none;             /* Removes underline */
+    margin-top: 10px;                  /* Space above the link */
+  }
+  
+  /* Hover effect for forgot link */
+  .forgot-link:hover {
+    text-decoration: underline;        /* Underlines link on hover */
+  }
+
+
+/*------------------------------------------------Registration page------------------------------------------------------*/
+
+
+  /* Container for the login form */
+  .register-container {
+    position: relative;                /* Ensures positioning context if needed */
+    z-index: 10;                       /* Higher z-index so it's clickable over other elements */
+    width: 500px;                      /* Fixed width for the form */
+    height: 430px;
+    padding: 20px;                     /* Padding around the form */
+    background-color: rgba(255, 255, 255, 0.9); /* Semi-transparent background */
+    border-radius: 8px;                /* Rounded corners */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); /* Soft shadow */
+    text-align: center;
+    margin: 0 auto;                    /* Centers the form horizontally */
+  }
+  
+  
+  /* Login heading */
+  .register-container h2 {
+    font-size: 20px;                   /* Larger font size for the title */
+    color: #333;                       /* Dark text color */
+    margin-bottom: 20px;               /* Space below the title */
+  }
+  
+  /* Form labels */
+  .register-form label {
+    display: block;                    /* Each label appears on its own line */
+    font-size: 14px;                   /* Smaller font for labels */
+    color: #333;                       /* Dark color for readability */
+    margin-bottom: 5px;                /* Space between label and input field */
+    text-align: left;                  /* Aligns label text to the left */
+  }
+  
+  /* Input fields (username and date of birth) */
+  .register-form input[type="text"],
+  .register-form input[type="date"] {
+    width: 100%;                       /* Full width for input fields */
+    padding: 10px;                     /* Space inside the input fields */
+    margin-bottom: 15px;               /* Space below each input field */
+    border: 1px solid #ddd;            /* Light border around input */
+    border-radius: 4px;                /* Rounded corners */
+    font-size: 16px;                   /* Font size for input text */
+  }
+  
+  
+  /* Continue button styling */
+  .register-btn {
+    width: 100%;                       /* Full width for the button */
+    padding: 12px;                     /* Space inside the button */
+    background-color: #4CAF50;         /* Green background color */
+    color: white;                      /* White text color */
+    border: none;                      /* Remove default border */
+    border-radius: 4px;                /* Rounded corners */
+    font-size: 16px;                   /* Larger font size for button text */
+    cursor: pointer;                   /* Pointer cursor on hover */
+    transition: background-color 0.3s; /* Smooth background color change on hover */
+  }
+  
+  /* Hover effect for the continue button */
+  .register-btn:hover {
+    background-color: #45a049;         /* Darker green when hovering */
+  }
+  
+  /* Forgot link styling */
+  .forgot-link {
+    display: block;                    /* Makes link appear on a new line */
+    font-size: 14px;                   /* Smaller font for link */
+    color: #0073e6;                    /* Blue color for link */
+    text-decoration: none;             /* Removes underline */
+    margin-top: 10px;                  /* Space above the link */
+  }
+  
+  /* Hover effect for forgot link */
+  .forgot-link:hover {
+    text-decoration: underline;        /* Underlines link on hover */
+  }
+
+/*-----------------------------------------------Contact Page-----------------------------------------------------------------------*/
+
+/* General Styling */
+body {
+  font-family: Arial, sans-serif;
+  color: #333;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Header */
+.contact-header {
+  background-color: #004080;
+  color: white;
+  text-align: center;
+  padding: 20px;
+}
+
+.contact-header h1 {
+  font-size: 2.5em;
+  margin: 0;
+}
+
+/* Contact Information Section */
+.contact-info-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: start;
+  padding: 20px;
+  gap: 30px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.contact-info, .social-media {
+  flex: 1;
+}
+
+.social-media a {
+  margin-right: 10px;
+}
+
+.social-media img {
+  width: 30px;
+  height: 30px;
+}
+
+/* Contact Form Section */
+.contact-form-section {
+  padding: 20px;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.contact-form-section h2 {
+  text-align: center;
+}
+
+.contact-form-section form {
+  display: flex;
+  flex-direction: column;
+}
+
+.contact-form-section label {
+  margin-top: 10px;
+  font-weight: bold;
+}
+
+.contact-form-section input,
+.contact-form-section textarea {
+  padding: 10px;
+  margin-top: 5px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.contact-form-section button {
+  background-color: #004080;
+  color: white;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  margin-top: 10px;
+  cursor: pointer;
+}
+
+.contact-form-section button:hover {
+  background-color: #00509e;
+}
+
+/* Map Section */
+.map-section {
+  background-color: #f9f9f9;
+  padding: 20px;
+  text-align: center;
+}
+
+.map-container {
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+/* FAQ Section */
+.faq-section {
+  padding: 20px;
+  background-color: #f3f3f3;
+}
+
+.faq-section h2 {
+  text-align: center;
+}
+
+.faq-section .faq {
+  margin-bottom: 20px;
+}
+
+.faq-section h3 {
+  font-size: 1.1em;
+  margin-bottom: 5px;
+}
+
+/* Footer 
+.footer {
+  background-color: #333;
+  color: white;
+  text-align: center;
+  padding: 15px;
+  font-size: 0.9em;
+}*/
+
+
+/*---------------------------------------------Transaction Section--------------------------------------------------*/
+
+/* To change the color in the transaction page just add a [] with a namd like "page"*/
+body[page="transaction"] {
+  background-color: #c04c4c;
+  color: #000;
+}
+
+.transaction-container {
+  background-color: #0056b3;
+  width: 100%;
+  max-width: 400px;
+  padding: 2rem;
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  margin-left: 500px;
+  margin-top: 50px;
+}
+
+h2 {
+  margin-bottom: 1.5rem;
+  color: #333;
+}
+
+.transaction-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+label {
+  font-size: 0.9rem;
+  color: #555;
+}
+
+input[type="text"],
+input[type="number"],
+textarea {
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 1rem;
+  transition: border-color 0.2s;
+}
+
+input[type="text"]:focus,
+input[type="number"]:focus,
+textarea:focus {
+  border-color: #007bff;
+  outline: none;
+}
+
+textarea {
+  resize: vertical;
+  min-height: 60px;
+}
+
+button {
+  padding: 0.75rem;
+  font-size: 1rem;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+
+
+
+
+
+
+
+/*-----------------------------------------------Footer Section---------------------------------------------------*/
+
+/* Basic footer styling */
+.footer {
+  background-color: #333;          /* Footer background color */
+  color: #fff;                     /* Footer text color */
+  padding: 5px;                   /* Space around footer content */
+  text-align: center;              /* Center-align footer content */
+}
+
+/* Basic footer styling */
+.footerr {
+  background-color: #333;          /* Footer background color */
+  color: #fff;                     /* Footer text color */
+  padding: 5px;                   /* Space around footer content */
+  margin-top: 46.5%;                   /* Space around footer content */
+  
+  text-align: center;              /* Center-align footer content */
+
+}
+
+/* Basic footer styling */
+.footerrr {
+  
+  background-color: #333;          /* Footer background color */
+  color: #fff;                     /* Footer text color */
+  padding: 5px;                   /* Space around footer content */
+  text-align: center;              /* Center-align footer content */
+}
+
+/* Basic footer styling */
+.footerrrr {
+  
+  background-color: #333;          /* Footer background color */
+  color: #fff;                     /* Footer text color */
+  padding: 5px;                   /* Space around footer content */
+  text-align: center;              /* Center-align footer content */
+  margin-top: 46.5px;                   /* Space around footer content */
+
+}
+
+.footer-content {
+  display: flex;                   /* Align items in a row */
+  align-items: center;             /* Center vertically */
+  justify-content: center;         /* Center horizontally */
+  gap: 10px;                       /* Space between items */
+  flex-wrap: wrap;                 /* Wrap content on smaller screens */
+}
+
+/* Copyright text */
+.footer-content p {
+  margin: 0;                       /* Remove margin */
+  font-size: 14px;                 /* Font size for readability */
+}
+
+/* Social media icons styling */
+.social-icons {
+  display: flex;                   /* Arrange icons in a row */
+  gap: 10px;                       /* Space between icons */
+}
+
+.social-icon {
+  width: 24px;                     /* Icon width */
+  height: 24px;                    /* Icon height */
+  transition: transform 0.3s ease; /* Add hover effect */
+}
+
+.social-icon:hover {
+  transform: scale(1.1);           /* Slightly enlarge icon on hover */
+}
+
+/* Responsive styling */
+@media (max-width: 600px) {
+  .footer-content {
+      flex-direction: column;      /* Stack items vertically on smaller screens */
+      gap: 5px;
+  }
+}
+
+/*----------------------------------------Contact Us--------------------------------*/
+
+
